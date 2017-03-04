@@ -1,2 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+    float: left;
+    color: #FFA500;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#logo:hover {
+    color: #FFF;
+    background-color:#FFA500;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+#jumbo_home {
+    background-image: asset-url('jumbo-bg.jpeg');
+    background-size: cover;
+    height: 400px;
+}
+
+#jumbo_home h1 {
+    margin-top: -15px;
+}
+
+.footer {
+    text-align: right;
+}
