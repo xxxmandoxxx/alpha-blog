@@ -5,7 +5,7 @@
             <h4 class="center"><strong>Description:</strong></h4>
             <%= simple_format(@article.description) %>
             <div class="pull-right">
-                <%= "Username: " + @article.user.username if @article.user %>
+                <%= link_to 'Username: ' + @article.user.username, user_path(@article.user) if @article.user %>
             </div>
         </div>
     </div>
