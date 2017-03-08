@@ -1,0 +1,14 @@
+<div class="container text-center">
+    <h1 align="center">All Alpha bloggers</h1>
+    <div align="center">
+      <%= will_paginate %>
+    </div>
+    <% @users.each do |user| %>
+      <div class="well col-md-8 col-md-offset-2">
+          <%= render 'display_user', obj: user %>
+      </div>
+    <% end %>
+    <div align="center">
+      <%= will_paginate %>
+    </div>
+</div>
