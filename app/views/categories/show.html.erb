@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 align="center"><%= @category.name.capitalize %></h2>
+    <% if logged_in? and current_user.admin? %>
+        <div align="center"><%= link_to 'Edit', edit_category_path(@category), class: "btn btn-primary btn-xs" %></div>
+    <% end %>
+    <div align="center">
+        <%= will_paginate @category_articles %>
+    </div>
+    <%= render 'articles/show_articles', obj: @category_articles %>
+</div>
+<div align="center">
+    <%= will_paginate @category_articles %>
+</div>
+

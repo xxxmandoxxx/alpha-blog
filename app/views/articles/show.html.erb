@@ -10,6 +10,10 @@
                 <% end %>
                 <h4 class="center"><strong>Description:</strong></h4>
                 <%= simple_format(@article.description) %>
+                <% if @article.categories.any? %>
+                    <%= render @article.categories %>
+                <% end %>
+                
                 <div class="pull-right">
                     <%= link_to 'Username: ' + @article.user.username, user_path(@article.user) if @article.user %>
                 </div>
@@ -21,6 +25,6 @@
                                         method: :delete, data: {confirm: "Are you sure ?"}, 
                                         class: "btn btn-xs btn-danger" %>
                 <% end %>
-    </div>
+            </div>
     </div>
 </div>
